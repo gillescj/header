@@ -23,6 +23,7 @@ const MainWrapper = styled.div`
 const Footer = styled.footer`
     padding: 2rem;
     background: #222222;
+    color: white;
 `;
 
 const Layout = ({ children, maxWidth = QUERIES.maxWidth, padding = '2rem 1rem' }) => {

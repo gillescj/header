@@ -4,5 +4,10 @@ export const QUERIES = {
     large: 'max-width: 1100px',
     xLarge: 'max-width: 1400px',
     maxWidth: '1400px',
-    maxHeaderWidth: '2000px',
+    maxHeaderWidth: '1600px',
+};
+
+export const COLOURS = {
+    bgHeader: 'white',
+    textHeader: 'hsl(0,0%,10%)',
 };

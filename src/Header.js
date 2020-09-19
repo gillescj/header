@@ -1,13 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
+import { QUERIES, COLOURS } from 'styling';
+import Navigation from 'Navigation';
+
+const WidthWrapper = styled.div`
+    display: grid;
+    grid-template-columns: minmax(1rem, ${({ maxHeaderWidth }) => maxHeaderWidth});
+    justify-content: center;
+    background: ${COLOURS.bgHeader};
+    box-shadow: 0 0.5px 1.9px rgba(0, 0, 0, 0.021), 0 4px 15px rgba(0, 0, 0, 0.06);
+`;
 
 const Container = styled.header`
-    padding: 2rem;
-    background: #0089ba;
+    color: ${COLOURS.textHeader};
 `;
 
 const Header = () => {
-    return <Container>Dummy Header Content</Container>;
+    return (
+        <WidthWrapper maxHeaderWidth={QUERIES.maxHeaderWidth}>
+            <Container>
+                {/* <MobileNavigation /> */}
+                <Navigation />
+            </Container>
+        </WidthWrapper>
+    );
 };
 
 export default Header;

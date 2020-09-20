@@ -6,12 +6,20 @@ import { ReactComponent as ChevDownSVG } from 'assets/svgs/chev-down.svg';
 
 const Container = styled.li`
     font-family: 'Raleway', sans-serif;
-    font-size: 1.1rem;
-    text-transform: uppercase;
     color: ${COLOURS.textHeader};
-    font-weight: 500;
     text-decoration: inherit;
     padding: 5px 0;
+`;
+
+const ContainerStandard = styled(Container)`
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+`;
+
+const ContainerFloating = styled(Container)`
+    font-weight: 700;
+    font-size: 1rem;
 `;
 
 const LabelContainer = styled.div`
@@ -47,20 +55,40 @@ const LabelContainer = styled.div`
     }
 `;
 
-const NavItem = ({ to, name, children }) => {
+const NavItem = ({ to, name, children, headerType }) => {
     const [open, setOpen] = useState(false);
 
-    return (
-        <Container onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-            <Link to={to}>
-                <LabelContainer>
-                    {name}
-                    {children ? <ChevDownSVG /> : null}
-                </LabelContainer>
-            </Link>
-            {open && children}
-        </Container>
-    );
+    if (headerType === 'standard') {
+        return (
+            <ContainerStandard
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+            >
+                <Link to={to}>
+                    <LabelContainer>
+                        {name}
+                        {children ? <ChevDownSVG /> : null}
+                    </LabelContainer>
+                </Link>
+                {open && children}
+            </ContainerStandard>
+        );
+    } else {
+        return (
+            <ContainerFloating
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+            >
+                <Link to={to}>
+                    <LabelContainer>
+                        {name}
+                        {children ? <ChevDownSVG /> : null}
+                    </LabelContainer>
+                </Link>
+                {open && children}
+            </ContainerFloating>
+        );
+    }
 };
 
 export default NavItem;

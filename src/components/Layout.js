@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { QUERIES } from 'styling';
 import { Route, Switch } from 'react-router-dom';
-import HeaderStandard from './headers/standard/Header';
-import HeaderFloating from './headers/floating/Header';
+import HeaderStandard from './headers/header-types/Standard';
+import HeaderFloating from './headers/header-types/Floating';
 
 const Container = styled.div`
     display: grid;

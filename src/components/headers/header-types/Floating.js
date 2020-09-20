@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { QUERIES, COLOURS } from 'styling';
 import Navigation from '../Navigation';
@@ -21,7 +21,7 @@ const Header = () => {
         <WidthWrapper maxHeaderWidth={QUERIES.maxHeaderWidth}>
             <Container>
                 {/* <MobileNavigation /> */}
-                <Navigation headerType="floating" />
+                <Navigation headerType="floating" logoPosition="left" />
             </Container>
         </WidthWrapper>
     );

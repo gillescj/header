@@ -79,10 +79,10 @@ const SVGContainerFloating = styled(SVGContainer)`
     }
 `;
 
-const Navigation = ({ headerType }) => {
+const Navigation = ({ headerType, logoPosition }) => {
     if (headerType === 'standard') {
         return (
-            <ContainerStandard>
+            <ContainerStandard logoPosition={logoPosition}>
                 <LogoContainer>
                     <Link to="/">
                         <SVGContainerStandard>{<SVGLogo />}</SVGContainerStandard>
@@ -144,7 +144,7 @@ const Navigation = ({ headerType }) => {
                 </RightNav>
             </ContainerStandard>
         );
-    } else {
+    } else if (headerType === 'floating') {
         return (
             <ContainerFloating>
                 <LogoContainer>

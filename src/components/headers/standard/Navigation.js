@@ -73,34 +73,58 @@ const Navigation = () => {
                 </Link>
             </LogoContainer>
             <RightNav>
-                <NavItem to="/standard" name="Standard">
+                <NavItem to="/standard" name="Standard" headerType="standard">
                     <NavItemDropdown>
                         <DropdownItem>
-                            <NavItem to="/standard/logoLeft" name="Logo Left" />
+                            <NavItem
+                                to="/standard/logoLeft"
+                                name="Logo Left"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/standard/logoMiddle" name="Logo Middle" />
+                            <NavItem
+                                to="/standard/logoMiddle"
+                                name="Logo Middle"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/standard/logoRight" name="Logo Right" />
+                            <NavItem
+                                to="/standard/logoRight"
+                                name="Logo Right"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                     </NavItemDropdown>
                 </NavItem>
-                <NavItem to="/floating" name="Floating">
+                <NavItem to="/floating" name="Floating" headerType="standard">
                     <NavItemDropdown>
                         <DropdownItem>
-                            <NavItem to="/floating/logoLeft" name="Logo Left" />
+                            <NavItem
+                                to="/floating/logoLeft"
+                                name="Logo Left"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/floating/logoMiddle" name="Logo Middle" />
+                            <NavItem
+                                to="/floating/logoMiddle"
+                                name="Logo Middle"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/floating/logoRight" name="Logo Right" />
+                            <NavItem
+                                to="/floating/logoRight"
+                                name="Logo Right"
+                                headerType="standard"
+                            />
                         </DropdownItem>
                     </NavItemDropdown>
                 </NavItem>
-                <NavItem to="/community" name="Community" />
-                <NavItem to="/contact" name="Contact" />
+                <NavItem to="/community" name="Community" headerType="standard" />
+                <NavItem to="/contact" name="Contact" headerType="standard" />
             </RightNav>
         </Container>
     );

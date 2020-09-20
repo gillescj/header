@@ -7,12 +7,13 @@ const WidthWrapper = styled.div`
     display: grid;
     grid-template-columns: minmax(1rem, ${({ maxHeaderWidth }) => maxHeaderWidth});
     justify-content: center;
-    padding-top: 1rem;
+    padding: 1rem 1.5rem 0rem 1.5rem;
 `;
 
 const Container = styled.header`
     color: ${COLOURS.textHeader};
     background: ${COLOURS.bgHeaderFloating};
+    border-radius: 8px;
 `;
 
 const Header = () => {

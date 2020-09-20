@@ -6,14 +6,8 @@ const Container = styled.div`
     display: flex;
     line-height: 1.5rem;
     font-size: 1rem;
-    border: black solid 2px;
     border-radius: 10px;
-    transition: background 700ms;
-    padding: 2rem 1rem;
-
-    &:hover {
-        background: ${COLOURS.darkGrey};
-    }
+    padding: 0.8rem;
 `;
 
 const DropdownItem = ({ children }) => {

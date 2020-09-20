@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { QUERIES, COLOURS } from 'styling';
-import Navigation from '../Navigation';
-import MobileNavigation from '../MobileNavigation';
+import Navigation from 'components/header/desktop/Navigation';
+import MobileNavigation from 'components/header/mobile/MobileNavigation';
 
 const WidthWrapper = styled.div`
     display: grid;

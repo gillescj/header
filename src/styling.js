@@ -8,7 +8,8 @@ export const QUERIES = {
 };
 
 export const COLOURS = {
-    bgHeader: 'white',
+    bgHeaderStandard: 'white',
+    bgHeaderFloating: 'hsl(180, 7%, 97%)',
     textHeader: 'hsl(0,0%,10%)',
     dropdownHover: 'hsl(0,100%,90%)',
     accent: 'hsl(148, 80%, 40%)',

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { QUERIES, COLOURS } from 'styling';
-import Navigation from './Navigation';
+import Navigation from '../Navigation';
 
 const WidthWrapper = styled.div`
     display: grid;
@@ -20,7 +20,7 @@ const Header = () => {
         <WidthWrapper maxHeaderWidth={QUERIES.maxHeaderWidth}>
             <Container>
                 {/* <MobileNavigation /> */}
-                <Navigation />
+                <Navigation headerType="standard" />
             </Container>
         </WidthWrapper>
     );

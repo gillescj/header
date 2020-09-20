@@ -89,58 +89,66 @@ const Navigation = ({ headerType }) => {
                     </Link>
                 </LogoContainer>
                 <RightNav>
-                    <NavItem to="/standard" name="Standard" headerType={headerType}>
+                    <NavItem to="/standard" name="Standard" headerType={headerType} />
+                    <NavItem to="/floating" name="Floating" headerType={headerType} />
+                    <NavItem
+                        to={`/${headerType}`}
+                        name="Dropdown"
+                        headerType={headerType}
+                    >
                         <NavItemDropdown>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoLeft"
-                                    name="Logo Left"
+                                    to={`/${headerType}`}
+                                    name="Option One"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoMiddle"
-                                    name="Logo Middle"
+                                    to={`/${headerType}`}
+                                    name="Option Two"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoRight"
-                                    name="Logo Right"
+                                    to={`/${headerType}`}
+                                    name="Option Three"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem to="/floating" name="Floating" headerType={headerType}>
+                    <NavItem
+                        to={`/${headerType}`}
+                        name="Dropdown 2"
+                        headerType={headerType}
+                    >
                         <NavItemDropdown>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoLeft"
-                                    name="Logo Left"
+                                    to={`/${headerType}`}
+                                    name="Option One"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoMiddle"
-                                    name="Logo Middle"
+                                    to={`/${headerType}`}
+                                    name="Option Two"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoRight"
-                                    name="Logo Right"
+                                    to={`/${headerType}`}
+                                    name="Option Three"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem to="/community" name="Community" headerType={headerType} />
-                    <NavItem to="/contact" name="Contact" headerType={headerType} />
                 </RightNav>
             </ContainerStandard>
         );
@@ -153,58 +161,66 @@ const Navigation = ({ headerType }) => {
                     </Link>
                 </LogoContainer>
                 <RightNav>
-                    <NavItem to="/standard" name="Standard" headerType={headerType}>
+                    <NavItem to="/standard" name="Standard" headerType={headerType} />
+                    <NavItem to="/floating" name="Floating" headerType={headerType} />
+                    <NavItem
+                        to={`/${headerType}`}
+                        name="Dropdown"
+                        headerType={headerType}
+                    >
                         <NavItemDropdown>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoLeft"
-                                    name="Logo Left"
+                                    to={`/${headerType}`}
+                                    name="Option One"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoMiddle"
-                                    name="Logo Middle"
+                                    to={`/${headerType}`}
+                                    name="Option Two"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/standard/logoRight"
-                                    name="Logo Right"
+                                    to={`/${headerType}`}
+                                    name="Option Three"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem to="/floating" name="Floating" headerType={headerType}>
+                    <NavItem
+                        to={`/${headerType}`}
+                        name="Dropdown 2"
+                        headerType={headerType}
+                    >
                         <NavItemDropdown>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoLeft"
-                                    name="Logo Left"
+                                    to={`/${headerType}`}
+                                    name="Option One"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoMiddle"
-                                    name="Logo Middle"
+                                    to={`/${headerType}`}
+                                    name="Option Two"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                             <DropdownItem>
                                 <NavItem
-                                    to="/floating/logoRight"
-                                    name="Logo Right"
+                                    to={`/${headerType}`}
+                                    name="Option Three"
                                     headerType={headerType}
                                 />
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem to="/community" name="Community" headerType={headerType} />
-                    <NavItem to="/contact" name="Contact" headerType={headerType} />
                 </RightNav>
             </ContainerFloating>
         );

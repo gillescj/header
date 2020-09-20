@@ -18,6 +18,8 @@ const LabelContainer = styled.div`
     cursor: pointer;
     svg {
         align-self: flex-end;
+        width: 20px;
+        height: 20px;
     }
 
     position: relative;
@@ -30,7 +32,7 @@ const LabelContainer = styled.div`
         bottom: -12px;
         left: 0;
         right: 0;
-        background-color: hsl(148, 80%, 40%);
+        background-color: ${COLOURS.accent};
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s cubic-bezier(0.04, 0.77, 0.44, 1.01);

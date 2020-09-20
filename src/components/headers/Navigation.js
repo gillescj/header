@@ -52,10 +52,6 @@ const RightNav = styled(NavUl)`
     justify-self: end;
 `;
 
-const LeftNav = styled(NavUl)`
-    justify-self: start;
-`;
-
 const SVGContainer = styled.div`
     padding: 0 1rem;
     svg {
@@ -89,8 +85,6 @@ const Navigation = ({ headerType }) => {
                     </Link>
                 </LogoContainer>
                 <RightNav>
-                    <NavItem to="/standard" name="Standard" headerType={headerType} />
-                    <NavItem to="/floating" name="Floating" headerType={headerType} />
                     <NavItem
                         to={`/${headerType}`}
                         name="Dropdown"
@@ -120,35 +114,8 @@ const Navigation = ({ headerType }) => {
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem
-                        to={`/${headerType}`}
-                        name="Dropdown 2"
-                        headerType={headerType}
-                    >
-                        <NavItemDropdown>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option One"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option Two"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option Three"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                        </NavItemDropdown>
-                    </NavItem>
+                    <NavItem to="/standard" name="Standard" headerType={headerType} />
+                    <NavItem to="/floating" name="Floating" headerType={headerType} />
                 </RightNav>
             </ContainerStandard>
         );
@@ -161,8 +128,6 @@ const Navigation = ({ headerType }) => {
                     </Link>
                 </LogoContainer>
                 <RightNav>
-                    <NavItem to="/standard" name="Standard" headerType={headerType} />
-                    <NavItem to="/floating" name="Floating" headerType={headerType} />
                     <NavItem
                         to={`/${headerType}`}
                         name="Dropdown"
@@ -192,35 +157,8 @@ const Navigation = ({ headerType }) => {
                             </DropdownItem>
                         </NavItemDropdown>
                     </NavItem>
-                    <NavItem
-                        to={`/${headerType}`}
-                        name="Dropdown 2"
-                        headerType={headerType}
-                    >
-                        <NavItemDropdown>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option One"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option Two"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                            <DropdownItem>
-                                <NavItem
-                                    to={`/${headerType}`}
-                                    name="Option Three"
-                                    headerType={headerType}
-                                />
-                            </DropdownItem>
-                        </NavItemDropdown>
-                    </NavItem>
+                    <NavItem to="/standard" name="Standard" headerType={headerType} />
+                    <NavItem to="/floating" name="Floating" headerType={headerType} />
                 </RightNav>
             </ContainerFloating>
         );

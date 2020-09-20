@@ -72,18 +72,30 @@ const Navigation = () => {
                 </a>
             </LogoContainer>
             <RightNav>
-                <NavItem to="/standard" name="Standard" />
+                <NavItem to="/standard" name="Standard">
+                    <NavItemDropdown>
+                        <DropdownItem>
+                            <NavItem to="/logoLeft" name="Logo Left" />
+                        </DropdownItem>
+                        <DropdownItem>
+                            <NavItem to="/logoMiddle" name="Logo Middle" />
+                        </DropdownItem>
+                        <DropdownItem>
+                            <NavItem to="/logoRight" name="Logo Right" />
+                        </DropdownItem>
+                    </NavItemDropdown>
+                </NavItem>
                 <NavItem to="/floating" name="Floating">
                     <NavItemDropdown>
-                        <a href="/logoLeft">
-                            <DropdownItem>Logo Left</DropdownItem>
-                        </a>
-                        <a href="/logoRight">
-                            <DropdownItem>Logo Right</DropdownItem>
-                        </a>
-                        <a href="/logoMiddle">
-                            <DropdownItem>Logo Middle</DropdownItem>
-                        </a>
+                        <DropdownItem>
+                            <NavItem to="/logoLeft" name="Logo Left" />
+                        </DropdownItem>
+                        <DropdownItem>
+                            <NavItem to="/logoMiddle" name="Logo Middle" />
+                        </DropdownItem>
+                        <DropdownItem>
+                            <NavItem to="/logoRight" name="Logo Right" />
+                        </DropdownItem>
                     </NavItemDropdown>
                 </NavItem>
                 <NavItem to="/community" name="Community" />

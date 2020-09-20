@@ -8,7 +8,7 @@ const HoverWrapper = styled.div`
     transform: translateX(-20px);
 `;
 
-const Container = styled.div`
+const Container = styled.ul`
     display: grid;
     grid-gap: 3px;
     padding: 1rem;

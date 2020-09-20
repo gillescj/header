@@ -1,5 +1,4 @@
 import React from 'react';
-import { COLOURS } from 'styling';
 import styled from 'styled-components';
 
 const HoverWrapper = styled.div`

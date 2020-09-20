@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOURS, QUERIES } from 'styling';
+import { QUERIES } from 'styling';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SVGLogo } from 'assets/svgs/logo.svg';

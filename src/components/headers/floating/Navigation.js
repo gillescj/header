@@ -76,26 +76,26 @@ const Navigation = () => {
                 <NavItem to="/standard" name="Standard">
                     <NavItemDropdown>
                         <DropdownItem>
-                            <NavItem to="/logoLeft" name="Logo Left" />
+                            <NavItem to="/standard/logoLeft" name="Logo Left" />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/logoMiddle" name="Logo Middle" />
+                            <NavItem to="/standard/logoMiddle" name="Logo Middle" />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/logoRight" name="Logo Right" />
+                            <NavItem to="/standard/logoRight" name="Logo Right" />
                         </DropdownItem>
                     </NavItemDropdown>
                 </NavItem>
                 <NavItem to="/floating" name="Floating">
                     <NavItemDropdown>
                         <DropdownItem>
-                            <NavItem to="/logoLeft" name="Logo Left" />
+                            <NavItem to="/floating/logoLeft" name="Logo Left" />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/logoMiddle" name="Logo Middle" />
+                            <NavItem to="/floating/logoMiddle" name="Logo Middle" />
                         </DropdownItem>
                         <DropdownItem>
-                            <NavItem to="/logoRight" name="Logo Right" />
+                            <NavItem to="/floating/logoRight" name="Logo Right" />
                         </DropdownItem>
                     </NavItemDropdown>
                 </NavItem>

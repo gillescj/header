@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { COLOURS, QUERIES } from 'styling';
+import { COLOURS } from 'styling';
+import { Link } from 'react-router-dom';
 import { ReactComponent as ChevDownSVG } from 'assets/svgs/chev-down.svg';
 
 const Container = styled.li`
@@ -51,12 +52,12 @@ const NavItem = ({ to, name, children }) => {
 
     return (
         <Container onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-            <a href={to}>
+            <Link to={to}>
                 <LabelContainer>
                     {name}
                     {children ? <ChevDownSVG /> : null}
                 </LabelContainer>
-            </a>
+            </Link>
             {open && children}
         </Container>
     );

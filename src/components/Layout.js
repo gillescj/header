@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { QUERIES } from 'styling';
-import Header from './Header';
+import { Route, Switch } from 'react-router-dom';
+import HeaderStandard from './headers/standard/Header';
+import HeaderFloating from './headers/floating/Header';
 
 const Container = styled.div`
     display: grid;
@@ -29,7 +31,11 @@ const Footer = styled.footer`
 const Layout = ({ children, maxWidth = QUERIES.maxWidth, padding = '2rem 1rem' }) => {
     return (
         <Container>
-            <Header />
+            <Switch>
+                <Route path="/" exact component={HeaderStandard} />
+                <Route path="/standard" component={HeaderStandard} />
+                <Route path="/floating" component={HeaderFloating} />
+            </Switch>
             <MainWrapper maxWidth={QUERIES.maxWidth} padding={padding}>
                 <main>{children}</main>
             </MainWrapper>

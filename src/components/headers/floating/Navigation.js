@@ -1,10 +1,11 @@
 import React from 'react';
 import { COLOURS, QUERIES } from 'styling';
 import styled from 'styled-components';
-import NavItem from './NavItem';
+import { Link } from 'react-router-dom';
 import { ReactComponent as SVGLogo } from 'assets/svgs/logo.svg';
-import NavItemDropdown from 'NavItemDropdown';
-import DropdownItem from './DropdownItem';
+import NavItem from '../NavItem';
+import NavItemDropdown from '../NavItemDropdown';
+import DropdownItem from '../DropdownItem';
 
 export const Container = styled.nav`
     display: grid;
@@ -67,9 +68,9 @@ const Navigation = () => {
     return (
         <Container>
             <LogoContainer>
-                <a href="/">
+                <Link to="/">
                     <SVGContainer>{<SVGLogo />}</SVGContainer>
-                </a>
+                </Link>
             </LogoContainer>
             <RightNav>
                 <NavItem to="/standard" name="Standard">

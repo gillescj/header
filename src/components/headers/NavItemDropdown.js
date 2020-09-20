@@ -13,7 +13,7 @@ const Container = styled.div`
     grid-gap: 3px;
     padding: 1rem;
     color: black;
-    background: ${COLOURS.bgHeader};
+    background: ${COLOURS.bgHeaderStandard};
     border-radius: 5px;
     box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.02), 0 0px 5.3px rgba(0, 0, 0, 0.028),
         0 0px 10px rgba(0, 0, 0, 0.035), 0 0px 17.9px rgba(0, 0, 0, 0.042),

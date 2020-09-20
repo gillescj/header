@@ -20,7 +20,7 @@ const Header = () => {
         <WidthWrapper maxHeaderWidth={QUERIES.maxHeaderWidth}>
             <Container>
                 {/* <MobileNavigation /> */}
-                <Navigation headerType="standard" logoPosition="left" />
+                <Navigation headerType="standard" />
             </Container>
         </WidthWrapper>
     );

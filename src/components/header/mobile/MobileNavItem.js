@@ -30,6 +30,8 @@ const LabelContainer = styled.div`
         align-self: center;
         width: 30px;
         height: 30px;
+        transition: transform 300ms ease-in-out;
+        transform: ${({ open }) => (open ? 'rotateX(180deg);' : 'none')};
     }
 
     &::after {
@@ -62,7 +64,7 @@ const MobileNavItem = ({ to, name, children, headerType }) => {
         return (
             <ContainerStandard onClick={() => setOpen((previousOpen) => !previousOpen)}>
                 <Link to={to}>
-                    <LabelContainer>
+                    <LabelContainer open={open}>
                         {name}
                         {children ? <ChevDownSVG /> : null}
                     </LabelContainer>
@@ -74,7 +76,7 @@ const MobileNavItem = ({ to, name, children, headerType }) => {
         return (
             <ContainerFloating onClick={() => setOpen((previousOpen) => !previousOpen)}>
                 <Link to={to}>
-                    <LabelContainer>
+                    <LabelContainer open={open}>
                         {name}
                         {children ? <ChevDownSVG /> : null}
                     </LabelContainer>

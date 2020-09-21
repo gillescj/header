@@ -6,6 +6,11 @@ import { ReactComponent as SVGContent } from 'assets/svgs/placeholder-content.sv
 
 const Container = styled.div`
     padding: 0 2%;
+    svg {
+        width: 100%;
+        max-width: 50rem;
+        height: auto;
+    }
 `;
 
 function App() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { COLOURS } from 'styling';
 import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring';
 
 const HoverWrapper = styled.div`
     position: absolute;
@@ -18,15 +19,20 @@ const Container = styled.ul`
     box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.02), 0 0px 5.3px rgba(0, 0, 0, 0.028),
         0 0px 10px rgba(0, 0, 0, 0.035), 0 0px 17.9px rgba(0, 0, 0, 0.042),
         0 0px 33.4px rgba(0, 0, 0, 0.05), 0 0px 80px rgba(0, 0, 0, 0.07);
-    opacity: ${({ visible }) => (visible ? '1' : '0')};
-    transition: opacity 2s ease-in-out;
 `;
 
 const NavItemDropdown = ({ children }) => {
+    const animProps = useSpring({
+        opacity: 1,
+        from: { opacity: 0 },
+        config: { mass: 5 },
+    });
     return (
-        <HoverWrapper>
-            <Container visible={typeof children !== 'undefined'}>{children}</Container>
-        </HoverWrapper>
+        <animated.div style={animProps}>
+            <HoverWrapper>
+                <Container>{children}</Container>
+            </HoverWrapper>
+        </animated.div>
     );
 };
 

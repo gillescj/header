@@ -25,7 +25,7 @@ const NavItemDropdown = ({ children }) => {
     const animProps = useSpring({
         opacity: 1,
         from: { opacity: 0 },
-        config: { mass: 5 },
+        config: { mass: 5, clamp: true },
     });
     return (
         <animated.div style={animProps}>

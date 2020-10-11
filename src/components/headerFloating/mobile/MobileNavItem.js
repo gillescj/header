@@ -9,15 +9,6 @@ const Container = styled.li`
     color: ${COLOURS.textHeader};
     text-decoration: inherit;
     padding-right: 0.5rem;
-`;
-
-const ContainerStandard = styled(Container)`
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.1rem;
-`;
-
-const ContainerFloating = styled(Container)`
     font-weight: 700;
     font-size: 1rem;
 `;
@@ -57,34 +48,20 @@ const LabelContainer = styled.div`
     }
 `;
 
-const MobileNavItem = ({ to, name, children, headerType }) => {
+const MobileNavItem = ({ to, name, children }) => {
     const [open, setOpen] = useState(false);
 
-    if (headerType === 'standard') {
-        return (
-            <ContainerStandard onClick={() => setOpen((previousOpen) => !previousOpen)}>
-                <Link to={to}>
-                    <LabelContainer open={open}>
-                        {name}
-                        {children ? <ChevDownSVG /> : null}
-                    </LabelContainer>
-                </Link>
-                {open && children}
-            </ContainerStandard>
-        );
-    } else {
-        return (
-            <ContainerFloating onClick={() => setOpen((previousOpen) => !previousOpen)}>
-                <Link to={to}>
-                    <LabelContainer open={open}>
-                        {name}
-                        {children ? <ChevDownSVG /> : null}
-                    </LabelContainer>
-                </Link>
-                {open && children}
-            </ContainerFloating>
-        );
-    }
+    return (
+        <Container onClick={() => setOpen((previousOpen) => !previousOpen)}>
+            <Link to={to}>
+                <LabelContainer open={open}>
+                    {name}
+                    {children ? <ChevDownSVG /> : null}
+                </LabelContainer>
+            </Link>
+            {open && children}
+        </Container>
+    );
 };
 
 export default MobileNavItem;

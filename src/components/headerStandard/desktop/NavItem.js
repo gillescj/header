@@ -9,17 +9,9 @@ const Container = styled.li`
     color: ${COLOURS.textHeader};
     text-decoration: inherit;
     padding: 5px 0;
-`;
-
-const ContainerStandard = styled(Container)`
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.1rem;
-`;
-
-const ContainerFloating = styled(Container)`
-    font-weight: 700;
-    font-size: 1rem;
 `;
 
 const LabelContainer = styled.div`
@@ -55,40 +47,20 @@ const LabelContainer = styled.div`
     }
 `;
 
-const NavItem = ({ to, name, children, headerType }) => {
+const NavItem = ({ to, name, children }) => {
     const [open, setOpen] = useState(false);
 
-    if (headerType === 'standard') {
-        return (
-            <ContainerStandard
-                onMouseEnter={() => setOpen(true)}
-                onMouseLeave={() => setOpen(false)}
-            >
-                <Link to={to}>
-                    <LabelContainer>
-                        {name}
-                        {children ? <ChevDownSVG /> : null}
-                    </LabelContainer>
-                </Link>
-                {open && children}
-            </ContainerStandard>
-        );
-    } else {
-        return (
-            <ContainerFloating
-                onMouseEnter={() => setOpen(true)}
-                onMouseLeave={() => setOpen(false)}
-            >
-                <Link to={to}>
-                    <LabelContainer>
-                        {name}
-                        {children ? <ChevDownSVG /> : null}
-                    </LabelContainer>
-                </Link>
-                {open && children}
-            </ContainerFloating>
-        );
-    }
+    return (
+        <Container onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+            <Link to={to}>
+                <LabelContainer>
+                    {name}
+                    {children ? <ChevDownSVG /> : null}
+                </LabelContainer>
+            </Link>
+            {open && children}
+        </Container>
+    );
 };
 
 export default NavItem;

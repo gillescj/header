@@ -87,7 +87,7 @@ const Dropdown = styled.ul`
     }
 `;
 
-const MobileNavigation = ({ headerType }) => {
+const MobileNavigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -107,39 +107,15 @@ const MobileNavigation = ({ headerType }) => {
                     </HamburgerButton>
                 </Topbar>
                 <Dropdown open={open}>
-                    <MobileNavItem
-                        to="/standard"
-                        name="Standard"
-                        headerType={headerType}
-                    />
-                    <MobileNavItem
-                        to="/floating"
-                        name="Floating"
-                        headerType={headerType}
-                    />
-                    <MobileNavItem
-                        to={`/${headerType}`}
-                        name="Dropdown"
-                        headerType={headerType}
-                    >
+                    <MobileNavItem to="/standard" name="Standard" />
+                    <MobileNavItem to="/floating" name="Floating" />
+                    <MobileNavItem to="/standard" name="Dropdown">
                         <MobileNavItemDropdown>
-                            <MobileNavItem
-                                to={`/${headerType}`}
-                                name="Option One"
-                                headerType={headerType}
-                            />
+                            <MobileNavItem to="/standard" name="Option One" />
 
-                            <MobileNavItem
-                                to={`/${headerType}`}
-                                name="Option Two"
-                                headerType={headerType}
-                            />
+                            <MobileNavItem to="/standard" name="Option Two" />
 
-                            <MobileNavItem
-                                to={`/${headerType}`}
-                                name="Option Three"
-                                headerType={headerType}
-                            />
+                            <MobileNavItem to="/standard" name="Option Three" />
                         </MobileNavItemDropdown>
                     </MobileNavItem>
                 </Dropdown>
